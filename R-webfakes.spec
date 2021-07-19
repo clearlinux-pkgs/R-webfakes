@@ -4,13 +4,15 @@
 #
 Name     : R-webfakes
 Version  : 1.1.3
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/webfakes_1.1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webfakes_1.1.3.tar.gz
 Summary  : Fake Web Apps for HTTP Testing
 Group    : Development/Tools
 License  : MIT
 Requires: R-webfakes-lib = %{version}-%{release}
+Requires: R-curl
+BuildRequires : R-curl
 BuildRequires : buildreq-R
 
 %description
@@ -35,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1619793926
+export SOURCE_DATE_EPOCH=1626708031
 
 %install
-export SOURCE_DATE_EPOCH=1619793926
+export SOURCE_DATE_EPOCH=1626708031
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -165,3 +167,4 @@ R CMD check --no-manual --no-examples --no-codoc webfakes || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/webfakes/libs/webfakes.so
 /usr/lib64/R/library/webfakes/libs/webfakes.so.avx2
+/usr/lib64/R/library/webfakes/libs/webfakes.so.avx512
