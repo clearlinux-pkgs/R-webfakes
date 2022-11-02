@@ -4,7 +4,7 @@
 #
 Name     : R-webfakes
 Version  : 1.1.5
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/webfakes_1.1.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webfakes_1.1.5.tar.gz
 Summary  : Fake Web Apps for HTTP Testing
