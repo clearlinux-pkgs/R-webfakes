@@ -4,7 +4,7 @@
 #
 Name     : R-webfakes
 Version  : 1.1.7
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/webfakes_1.1.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/webfakes_1.1.7.tar.gz
 Summary  : Fake Web Apps for HTTP Testing
@@ -13,9 +13,6 @@ License  : MIT
 Requires: R-webfakes-lib = %{version}-%{release}
 BuildRequires : R-curl
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 without using the internet. It includes a web app framework with path
@@ -39,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675879846
+export SOURCE_DATE_EPOCH=1678826207
 
 %install
-export SOURCE_DATE_EPOCH=1675879846
+export SOURCE_DATE_EPOCH=1678826207
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
