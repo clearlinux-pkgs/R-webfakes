@@ -1,4 +1,6 @@
 # This file contains recursive sources that require this package
+R-processx
+R-ps
 R-rcmdcheck
 R-remotes
 R-rvest
